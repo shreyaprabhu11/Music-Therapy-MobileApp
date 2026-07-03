@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    tools:context=".features.Admin.activities.AdminFormPart2"
+    >
+
+    <!-- User Profile Image -->
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_user_placeholder"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
+        android:elevation="10dp"
+        android:contentDescription="@string/profile_image" />
+
+    <!-- Main Content Card -->
+    <RelativeLayout
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/profile_image"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/scrollview_border_background"
+        android:paddingStart="24dp"
+        android:paddingTop="60dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="22dp">
+
+        <!-- Role Row -->
+        <RelativeLayout
+            android:id="@+id/role_layout"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/role_label"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Email"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="229dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="18dp"
+                android:layout_toRightOf="@id/role_label"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/corners">
+
+                <EditText
+                    android:id="@+id/role_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textEmailAddress"
+                    android:background="@android:color/transparent"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="40dp" /> <!-- Add padding to prevent text overlapping the arrow -->
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- Full Name Row -->
+
+        <!-- Next Button -->
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="56dp"
+            android:layout_below="@id/role_layout"
+            android:layout_marginTop="50dp"
+            android:text="Create Account"
+            android:background="@drawable/rounded_button"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@null"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

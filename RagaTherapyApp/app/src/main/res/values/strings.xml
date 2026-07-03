@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">MusicApp1.0</string>
+    <string name="go_to_music_btn">go to music</string>
+    <string name="placeholder">Placeholder</string>
+    <string name="music_play_time">0:00</string>
+    <string name="book_now">Book Now</string>
+    <string name="excel_report_generation">Excel Report Generation</string>
+    <string name="generated_credentials_title">Generated Credentials</string>
+    <string name="availbale_slots">Availbale Slots</string>
+    <string name="copy_button_text">Copy</string>
+    <string name="contact_therapist">Contact Therapist</string>
+    <string name="book_a_session_with_our_experts">Book a session with our experts</string>
+    <string name="therapist">Therapist</string>
+
+    <string name="ok">OK</string>
+    <string name="reset">Reset</string>
+    <string name="enable">Enable</string>
+    <string name="hh_mm_ampm">HH:MM AM/PM</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="delete_slot">Delete Slot</string>
+    <string name="no_time_slot_set">No Time Slots Set. Click Add to Begin.</string>
+    <string name="add_time_slot">Add New Time Slot</string>
+    <string name="select_holiday">Select Recurring Holidays</string>
+    <string name="select_holiday_btn">Set Recurring Holidays</string>
+    <string name="set">Set Holidays</string>
+    <string name="manage_slots">Manage Time Slots</string>
+    <string name="go_to_time_slot_manager">Go to Time Slot Manager</string>
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="create_time_slot">Create Time Slot</string>
+    <string name="successfully_created">Successfully Created</string>
+    <string name="successfull">Successfully Completed</string>
+
+    <string name="music">Music</string>
+    <string-array name="music_name">
+        <item>Song1</item>
+        <item>Song2</item>
+        <item>Song3</item>
+        <item>Song4</item>
+        <item>Song5</item>
+    </string-array>
+    <string name="forgot_password">
+<u>Forgot Password</u>
+</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="role">Role</string>
+    <string name="full_name">Full Name</string>
+    <string name="ph_no">Ph No.</string>
+    <string name="phone_hint">+91 |</string>
+    <string name="card_music_name">TextView</string>
+    <string name="back_button">Back</string>
+    <string name="songs_contribution">Songs\' Contribution</string>
+    <string name="sender_info">
+Name Surname\n
+<u>abc@example.com</u>
+</string>
+    <string name="long_message_text">I\'ve been using this music app for a few weeks, and overall, I really enjoy it! The interface is clean and easy to navigate, and the recommendations are surprisingly accurate. I like the personalized playlists—it feels like the app actually understands my taste.\n\nOne thing I\'d suggest is improving the offline download speed, as it takes a bit longer than expected. Also, it would be nice to have more social features, like sharing playlists directly with friends.\n\nOverall, it\'s a solid app for music lovers, and I\'ll definitely keep using it!</string>
+    <string name="sent_timestamp">Sent on August 25, 2025 14:25 p.m.</string>
+    <string name="person_icon">Person</string>
+    <string name="add_icon">Add</string>
+    <string name="notifications_icon">Notifications</string>
+    <string name="album_art">Album Art</string>
+    <string name="song_1">Song 1</string>
+    <string name="duration_3min">Duration: 3min</string>
+    <string name="upload_new_song">Upload New Song</string>
+    <string name="song_name">Song Name</string>
+    <string name="song_name_hint">Raga Beats</string>
+    <string name="song_upload">Song Upload</string>
+    <string name="category">Category</string>
+    <string name="upload">Upload</string>
+    <string name="upload_button">Upload Song</string>
+    <string name="music_icon">Music</string>
+    <string name="group_icon">Group</string>
+    <string name="doctor_image">Doctor Image</string>
+    <string name="user_id_placeholder">USER2001</string>
+    <string name="consultant_specialty">Therapist</string>
+    <string name="consultant_email_placeholder">example123@email.com</string>
+    <string name="access_all">Access All</string>
+    <string name="consultant_image">Image</string>
+    <!--  User Profile Details  -->
+    <string name="user_name_details">NAME SURNAME</string>
+    <string name="user_contact_details">Ph: 1233454332\nE-mail: qwerty123@example.com</string>
+    <string name="disease_info">Disease : Breast Cancer</string>
+    <string name="stage_info">Stage: I</string>
+    <string name="listening_time_info">Total Listening Time: 124 min</string>
+    <string name="assigned_consultants">Assigned Consultants</string>
+    <!--  Consultant List Item (Placeholder)  -->
+    <string name="consultant_name">Name Surname</string>
+    <string name="consultant_id">USERID001</string>
+    <string name="consultant_role">Therapist</string>
+    <string name="consultant_email">example123@email.com</string>
+    <string name="next">Next</string>
+    <!--  TODO: Remove or change this placeholder text  -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

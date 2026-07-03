@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink_very_light"
+    android:fitsSystemWindows="true"
+    android:padding="32dp">
+
+    <TextView
+        android:id="@+id/text_holiday_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/select_holiday"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_set"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_holiday_title">
+
+        <LinearLayout
+            android:id="@+id/day_rows_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Sunday Row -->
+            <LinearLayout
+                style="@style/DayRowStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_sunday"
+                    style="@style/DayRowTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/sunday" />
+
+                <CheckBox
+                    android:id="@+id/cb_sunday"
+                    style="@style/DayRowCheckBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Monday Row -->
+            <LinearLayout
+                style="@style/DayRowStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_monday"
+                    style="@style/DayRowTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/monday" />
+
+                <CheckBox
+                    android:id="@+id/cb_monday"
+                    style="@style/DayRowCheckBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Tuesday Row -->
+            <LinearLayout
+                style="@style/DayRowStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_tuesday"
+                    style="@style/DayRowTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/tuesday" />
+
+                <CheckBox
+                    android:id="@+id/cb_tuesday"
+                    style="@style/DayRowCheckBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Wednesday Row -->
+            <LinearLayout
+                style="@style/DayRowStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_wednesday"
+                    style="@style/DayRowTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/wednesday" />
+
+                <CheckBox
+                    android:id="@+id/cb_wednesday"
+                    style="@style/DayRowCheckBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Thursday Row -->
+            <LinearLayout
+                style="@style/DayRowStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_thursday"
+                    style="@style/DayRowTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/thursday" />
+
+                <CheckBox
+                    android:id="@+id/cb_thursday"
+                    style="@style/DayRowCheckBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Friday Row -->
+            <LinearLayout
+                style="@style/DayRowStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_friday"
+                    style="@style/DayRowTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/friday" />
+
+                <CheckBox
+                    android:id="@+id/cb_friday"
+                    style="@style/DayRowCheckBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Saturday Row -->
+            <LinearLayout
+                style="@style/DayRowStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_saturday"
+                    style="@style/DayRowTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/saturday" />
+
+                <CheckBox
+                    android:id="@+id/cb_saturday"
+                    style="@style/DayRowCheckBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_set"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/purple_dark"
+        android:text="@string/set"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_reset"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/purple_dark"
+        android:text="@string/reset"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_set" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

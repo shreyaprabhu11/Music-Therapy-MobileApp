@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    tools:context=".features.Admin.activities.FormActivityPart1"
+    >
+
+    <!-- User Profile Image -->
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_user_placeholder"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
+        android:elevation="10dp"
+        android:contentDescription="@string/profile_image" />
+
+    <!-- Main Content Card -->
+    <RelativeLayout
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/scrollview_border_background"
+        android:paddingStart="24dp"
+        android:paddingTop="60dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="32dp">
+
+        <!-- Role Row -->
+        <RelativeLayout
+            android:id="@+id/role_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/role_label"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/role"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/role_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/role_label"
+                android:background="@drawable/rounded_edittext_background"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+        </RelativeLayout>
+
+        <!-- Full Name Row -->
+        <RelativeLayout
+            android:id="@+id/full_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/role_layout"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/full_name_label"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/full_name"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/full_name_input"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/full_name_label"
+                android:autofillHints="name"
+                android:background="@drawable/rounded_edittext_background"
+                android:inputType="textPersonName"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+        </RelativeLayout>
+
+        <!-- Phone Number Row -->
+        <RelativeLayout
+            android:id="@+id/phone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/full_name_layout"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:id="@+id/phone_label"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/ph_no"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/phone_input"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/phone_label"
+                android:autofillHints="phone"
+                android:background="@drawable/rounded_edittext_background"
+                android:hint="@string/phone_hint"
+                android:inputType="phone"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+        </RelativeLayout>
+
+        <!-- Next Button -->
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="56dp"
+            android:layout_below="@id/phone_layout"
+            android:text="@string/next"
+            android:background="@drawable/rounded_button"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@null"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

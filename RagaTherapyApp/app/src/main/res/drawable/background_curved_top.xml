@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Layer 1: The outer shape which will act as the border -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#000" /> <!-- The color of your border -->
+            <corners
+                android:topLeftRadius="60dp"
+                android:topRightRadius="60dp" />
+        </shape>
+    </item>
+
+    <!-- Layer 2: The inner shape (the actual background) -->
+    <!-- It is inset from the top, left, and right to reveal the border -->
+    <item
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp"
+        android:bottom="0dp"> <!-- No inset from the bottom, so it covers the bottom border -->
+        <shape android:shape="rectangle">
+            <solid android:color="#FCE4EC" /> <!-- The main background color -->
+            <!-- The corner radius is slightly smaller to fit inside the border -->
+            <corners
+                android:topLeftRadius="58dp"
+                android:topRightRadius="58dp" />
+        </shape>
+    </item>
+
+</layer-list>
+

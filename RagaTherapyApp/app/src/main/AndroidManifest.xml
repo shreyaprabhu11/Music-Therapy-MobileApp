@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- For Android 13+ notification prompt (if you target it) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MusicApp">
+        <activity
+            android:name=".features.settings.activities.ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.settings.activities.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.Admin.activities.ExcelFormGeneration"
+            android:exported="false" /> <!-- 2. Consultant Time Slot Creation Activity -->
+        <activity
+            android:name=".features.consultant.activities.CreateTimeSlotActivity"
+            android:exported="false"
+            android:label="@string/create_time_slot" /> <!-- 3. Consultant Time Slot Management View Activity -->
+        <activity
+            android:name=".features.consultant.activities.TimeSlotCreation"
+            android:exported="false"
+            android:label="@string/manage_slots" /> <!-- 4. Consultant Holiday Selection Activity -->
+        <activity
+            android:name=".features.consultant.activities.HolidaySelectionActivity"
+            android:exported="false"
+            android:label="@string/select_holiday" />
+        <activity
+            android:name=".features.patient.activities.NotificationDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.patient.activities.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.patient.activities.ConsultantListActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".core.services.MusicSessionService"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback">
+            <intent-filter>
+                <action android:name="androidx.media3.session.MediaSessionService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".features.patient.activities.MusicPlayerActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".features.patient.activities.MusicList"
+            android:exported="false" />
+        <activity
+            android:name=".features.Admin.activities.GenerateCredentialsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Admin pages -->
+        <activity
+            android:name=".features.Admin.activities.MusicListRowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.Admin.activities.MusicListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.Admin.activities.UploadSongScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.Admin.activities.SongDetailsScreenUIActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.Admin.activities.ListViewClickActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.Admin.activities.ListItemConsultantActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.Admin.activities.FormActivityPart1"
+            android:exported="false" />
+        <activity
+            android:name=".features.Admin.activities.AdminFormPart2"
+            android:exported="false" />
+        <activity
+            android:name=".features.Admin.activities.ConsultantFormPart2"
+            android:exported="false" />
+        <activity
+            android:name=".features.Admin.activities.PatientFormPart2"
+            android:exported="false" />
+        <activity
+            android:name=".features.Admin.activities.FeedbackFullActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.Admin.activities.FeedBackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.Admin.activities.DataViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.Admin.activities.ConsultantListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.Admin.activities.UserListActivity"
+            android:exported="true"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

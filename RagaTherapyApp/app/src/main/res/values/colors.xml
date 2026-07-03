@@ -1,0 +1,38 @@
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Backgrounds -->
+    <color name="color_background">#FFF7F9</color> <!-- very soft cream -->
+    <color name="color_light">#F2F2F2</color> <!-- subtle cards -->
+
+    <!-- Primary Gradient Palette -->
+    <color name="color_primary_100">#FFE5F0</color>
+    <color name="color_primary_200">#FFCCE1</color>
+    <color name="color_primary_300">#FFB3D2</color>
+    <color name="color_primary_500">#FF99C3</color>
+    <color name="color_primary_700">#FF80B4</color>
+    <color name="color_primary_900">#FF66A5</color>
+    <color name="link">#0000FF</color>
+
+    <!--Consultant Colors-->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="pink_light">#FFC0CB</color>
+    <color name="pink_very_light">#FFE4E1</color>
+    <color name="purple_dark">#5D3FD3</color>
+    <color name="green_success">#4CAF50</color>
+
+    <color name="colorPrimaryDark">#64113F</color>
+    <color name="colorPrimary">#6A475A</color>
+    <color name="colorAccent">#F48FB1</color>
+    <color name="colorSurface">#FBCFE8</color>
+    <color name="colorBackground">#FCE4EC</color>
+    <color name="textColorSecondary">#5A5A5A</color>
+
+    <!-- Dark Accent -->
+    <color name="color_dark">#5C1B3C</color>
+</resources>

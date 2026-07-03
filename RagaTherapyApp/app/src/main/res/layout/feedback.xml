@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".features.Admin.activities.FeedBackActivity">
+
+    <!-- Top App Bar -->
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Back" />
+
+    </RelativeLayout>
+
+    <!-- Chat List -->
+    <ListView
+        android:id="@+id/chat_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_bar"
+        android:layout_above="@id/bottom_nav"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        android:padding="8dp"
+        tools:listitem="@layout/list_item_chat"/>
+
+    <!-- Bottom Navigation Bar -->
+    <RelativeLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_nav_background"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:id="@+id/bottom_nav_linear"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:elevation="4dp">
+
+            <FrameLayout
+                android:id="@+id/nav_person_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/music_note_selected_background"
+                    android:contentDescription="@string/group_icon"
+                    android:padding="8dp"
+                    app:tint="@color/white"
+                    android:src="@drawable/ic_person" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/nav_add_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/add_icon"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_add_circle" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/nav_music_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/music_icon"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_music_note" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/nav_group_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/group_icon"
+                    android:padding="8dp"
+                    android:src="@drawable/medical_assistance" />
+            </FrameLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

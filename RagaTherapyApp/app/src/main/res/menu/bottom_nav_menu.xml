@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_music"
+        android:icon="@drawable/baseline_music_note_24"
+        android:title="@string/music" />
+
+    <item
+        android:id="@+id/nav_consultant"
+        android:icon="@drawable/baseline_person_24"
+        android:title="@string/therapist" />
+
+</menu>

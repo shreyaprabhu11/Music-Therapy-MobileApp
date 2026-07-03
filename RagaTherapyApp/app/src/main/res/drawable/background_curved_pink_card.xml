@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Layer 1: The Border -->
+    <!-- This is a solid rectangle that will act as the border color. -->
+    <item>
+        <shape android:shape="rectangle">
+            <!-- Use a darker shade for the border color -->
+            <solid android:color="#000" />
+            <!-- The border needs rounded corners to be visible behind the content layer -->
+            <corners
+                android:topLeftRadius="32dp"
+                android:topRightRadius="32dp" />
+        </shape>
+    </item>
+
+    <!-- Layer 2: The Main Background -->
+    <!-- This is the main pink background. We add margins on the top, left, and right -->
+    <!-- to reveal the border layer underneath on those three sides. -->
+    <item android:top="2dp" android:left="2dp" android:right="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/colorSurface" />
+            <!-- The content layer also needs rounded corners to match the border -->
+            <corners
+                android:topLeftRadius="32dp"
+                android:topRightRadius="32dp"
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="0dp" />
+        </shape>
+    </item>
+
+</layer-list>
+

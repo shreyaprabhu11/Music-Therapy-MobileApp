@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".features.Admin.activities.DataViewActivity">
+
+    <!-- Top Bar -->
+    <RelativeLayout
+        android:id="@+id/top_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FCE4EC">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/back_button"
+            android:padding="8dp"
+            android:src="@drawable/ic_arrow_back" />
+
+        <ImageView
+            android:id="@+id/chart_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/chosen"
+            android:contentDescription="@string/notifications_icon"
+            android:padding="8dp"
+            app:tint="@color/white"
+            android:src="@drawable/ic_pie_chart" />
+
+        <ImageView
+            android:id="@+id/person_icon_top"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/chart_icon"
+            android:contentDescription="@string/person_icon"
+            android:padding="8dp"
+            android:src="@drawable/ic_person_icon_top" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="#000000" />
+
+    </RelativeLayout>
+
+    <!-- Bottom Navigation Bar -->
+    <RelativeLayout
+        android:id="@+id/bottom_nav_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:elevation="4dp">
+        <!-- Bottom Nav content... -->
+        <LinearLayout
+            android:id="@+id/bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/bottom_nav_background"
+            android:elevation="4dp">
+
+            <FrameLayout
+                android:id="@+id/nav_person_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/music_note_selected_background"
+                    android:contentDescription="@string/music_icon"
+                    android:padding="8dp"
+                    app:tint="@color/white"
+                    android:src="@drawable/ic_person" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/nav_add_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/add_icon"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_add_circle" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/nav_music_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/music_icon"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_music_note" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/nav_group_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/group_icon"
+                    android:padding="8dp"
+                    android:src="@drawable/medical_assistance" />
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Bar Chart Card -->
+    <RelativeLayout
+        android:id="@+id/bar_chart_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_bar_layout"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_background_light"
+        android:elevation="2dp"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/bar_chart_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/songs_contribution"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <com.github.mikephil.charting.charts.HorizontalBarChart
+            android:id="@+id/barChart"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_below="@id/bar_chart_title" />
+
+    </RelativeLayout>
+
+    <!-- Fragment Container for the Pie Chart -->
+    <FrameLayout
+        android:id="@+id/pie_chart_fragment_container"
+        android:name="com.example.yourapp.PieChartFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bar_chart_card"
+        android:layout_above="@id/bottom_nav_layout"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="-16dp"
+        android:background="@drawable/background_curved_top"
+        tools:layout="@layout/fragment_pie_chart" />
+
+</RelativeLayout>
+

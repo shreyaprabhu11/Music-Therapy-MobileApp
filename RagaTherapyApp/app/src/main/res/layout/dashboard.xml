@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:background="#FDFDFD"
+    tools:context=".features.Admin.activities.UserListActivity"
+    >
+
+    <!-- Top Bar -->
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/user_icon_top"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_user_placeholder"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="User Profile" />
+
+        <ImageView
+            android:id="@+id/chat_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_chat_bubble"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="Chat" />
+    </RelativeLayout>
+
+    <!-- Search Bar -->
+    <RelativeLayout
+        android:id="@+id/search_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_bar"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/rounded_background_pink"
+        android:padding="4dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Search By Name"
+            android:textStyle="bold"
+            android:textColorHint="@color/black"
+            android:background="@android:color/transparent"
+            android:padding="12dp"
+            android:layout_toStartOf="@id/search_icon"/>
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_search"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Search"/>
+    </RelativeLayout>
+
+    <!-- Buttons Row -->
+    <LinearLayout
+        android:id="@+id/buttons_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_container"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/sort_by_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custom_spinner_background"
+            android:layout_marginEnd="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:minHeight="48dp"/>
+
+
+        <Button
+            android:id="@+id/excel_data_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CSV Data"
+            android:textColor="#FFFF"
+            app:backgroundTint="@null"
+            android:background="@drawable/custom_spinner_background"
+            android:backgroundTint="#6A475A"
+            app:icon="@drawable/ic_download"
+            app:iconTint="#FFF"
+            app:iconSize="20dp"
+            app:strokeColor="#DDDDDD"
+            app:strokeWidth="1dp"
+            app:iconGravity="end"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- User List -->
+    <ListView
+        android:id="@+id/user_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/buttons_row"
+        android:layout_above="@id/bottom_nav"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="16dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="12dp"
+        tools:listitem="@layout/list_item_user"/>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/bottom_nav_background"
+        android:elevation="4dp">
+
+        <FrameLayout
+            android:id="@+id/nav_person_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:background="@drawable/music_note_selected_background"
+                android:contentDescription="@string/music_icon"
+                android:padding="8dp"
+                app:tint="@color/white"
+                android:src="@drawable/ic_person" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/nav_add_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/add_icon"
+                android:padding="8dp"
+                android:src="@drawable/ic_add_circle" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/nav_music_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/music_icon"
+                android:padding="8dp"
+                android:src="@drawable/ic_music_note" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/nav_group_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/group_icon"
+                android:padding="8dp"
+                android:src="@drawable/medical_assistance" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>
+

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_background_pink"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp">
+
+    <!-- Left side: Icon and User ID -->
+    <LinearLayout
+        android:id="@+id/consultant_icon_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginEnd="16dp"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/consultant_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_doctor_placeholder"
+            android:contentDescription="@string/consultant_image" />
+
+        <TextView
+            android:id="@+id/consultant_user_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_id_placeholder"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <!-- Right side: Details -->
+    <RelativeLayout
+        android:id="@+id/consultant_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_toEndOf="@id/consultant_icon_layout"
+        android:layout_centerVertical="true">
+
+        <!-- Switch on the far right -->
+        <Switch
+            android:id="@+id/access_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <!-- "Access All" label to the left of the switch -->
+        <TextView
+            android:id="@+id/access_all_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@id/access_switch"
+            android:text="@string/access_all"
+            android:paddingBottom="5dp"
+            android:layout_alignParentBottom="true"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <!-- Container for left-aligned text to prevent overlap -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/consultant_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/consultant_name"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/consultant_role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/consultant_role"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/consultant_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="email"
+                android:text="@string/consultant_email"
+                android:textColorLink="#000000"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
+

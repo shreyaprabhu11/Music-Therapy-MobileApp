@@ -1,0 +1,19 @@
+<resources>
+    <color name="black">#FFFFFFFF</color> <!-- text on dark -->
+    <color name="white">#FF000000</color>
+
+    <!-- Backgrounds -->
+    <color name="color_background">#121212</color>
+    <color name="color_light">#1E1E1E</color> <!-- card surfaces -->
+
+    <!-- Primary Gradient Palette -->
+    <color name="color_primary_100">#2A1A2F</color>
+    <color name="color_primary_200">#3C1F44</color>
+    <color name="color_primary_300">#4E254F</color>
+    <color name="color_primary_500">#FF80B4</color> <!-- accent (same as light gradient mid) -->
+    <color name="color_primary_700">#FF99C3</color>
+    <color name="color_primary_900">#FFB3D2</color>
+
+    <!-- Dark Accent -->
+    <color name="color_dark">#FF66A5</color> <!-- highlights -->
+</resources>
